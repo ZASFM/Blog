@@ -1,7 +1,57 @@
 @import 'mobile_style.css';
 @import 'medium_style.css';
-
-*{
-   margin: 0;
-   padding: 0;
+/*-------------------------------------------------------------CSS for JavaScript-------------------------------------------------*/
+body{
+   background-color: bisque;
 }
+
+#welcomeContainer{
+   top:0;
+   left:0;
+   /* display: none; */
+   width:100%;
+   height: 100%;
+   position: fixed;
+   z-index: 1;
+   background-color: rgba(0, 0, 0, 0.25);
+}
+
+#welcomeContainer #welcomeMessage{
+   width:400px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: white;
+   border: 1px solid black;
+   border-radius: 15px;
+   padding:10px 15px;
+   font-size: 1.5rem;
+   gap:1rem;
+   box-shadow: 0 0 7px;
+   position: absolute;
+   top:40%;
+   left:37.5%;
+   animation-name: topToCenter;
+   animation-duration: 1.5s;
+}
+
+#closeMessage{
+   font-size: 3.5rem;
+}
+
+#closeMessage:hover{
+   cursor: pointer;
+   color:red;
+}
+
+@keyframes topToCenter{
+   from{
+      top: 0px;
+      opacity:0;
+   }
+   to{
+      top: 40%;
+      opacity: 1;
+   }
+}
+/*-------------------------------------------------------------------------------------------------------------------------------*/
