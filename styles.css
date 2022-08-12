@@ -1,3 +1,6 @@
+@import 'mobile_style.css';
+@import 'medium_style.css';
+
 *{
    margin: 0;
    padding: 0;
