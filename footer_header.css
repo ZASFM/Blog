@@ -1,0 +1,125 @@
+header{
+   height:400px;
+   width: 100%;
+}
+
+.headerContainer{
+   height: 400px; 
+   position: absolute;
+   top: 0;
+   left:0;
+   right: 0;
+   background-color: bisque;
+}
+
+nav{
+   margin-top: 7.5px;
+}
+
+nav >ul{
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   align-items: center;
+   padding:5px 10px;
+}
+
+nav ul li .navFlex{
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   align-items: center;
+   width:400px;
+}
+
+nav ul li{
+   list-style: none;
+   font-size: 1.5rem;
+}
+
+nav ul li:last-child >button{
+   font-size: 1.2rem;
+   border: 1px solid blue;
+   border-radius: 10px;
+   background-color: blue;
+   padding:10px 20px;
+   color: white;
+}
+
+.headerContainer .name, .title{
+   text-align: center;
+}
+
+.headerContainer .name{
+   margin-top: 150px;
+}
+
+footer{
+   width:100%;
+   height:700px;
+   position: absolute;
+   left: 0;
+   right: 0;
+}
+
+footer .contact{
+   width:100%;
+   background-color: rosybrown;
+   height: 300px;
+}
+
+footer .info{
+   top: 300px;
+   width:100%;
+   background-color: blue;
+   height: 300px;
+}
+
+footer .copyright{
+   width:100%;
+   background-color: black;
+   color: white;
+   height: 100px;
+   top: 600px;
+}
+
+footer .contact .text{
+   text-align: center;
+   border: 1px solid transparent;
+}
+
+footer .contact .text>h5{
+   margin-top: 30px;
+}
+
+footer .contact .contactWays{
+   margin-top: 40px;
+   display: flex;
+   flex-flow: row wrap;
+   gap:2rem;
+   justify-content: space-around;
+   align-items: center;
+}
+
+footer .contact .contactWays .item1{
+   padding:15px 30px;
+   width:300px;
+   border: 1px solid white;
+   border-radius: 5px;
+   background-color: white;
+   display: grid;
+   grid:auto /100px 1fr;
+   grid-template-areas: 'myLeft myRight';
+}
+
+footer .contact .contactWays .item1 .sideLeft{
+   grid-area: myLeft;
+   font-size: 3rem;
+   align-self: center;
+}
+
+footer .contact .contactWays .item1 .sideRight{
+   grid-area: myRight;
+   margin-left: -25px;
+}
+

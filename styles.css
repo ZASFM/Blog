@@ -1,10 +1,11 @@
 /*-----------------------------------------------------Importation -GDP-----------------------------------------------------------*/
 @import 'mobile_style.css';
 @import 'medium_style.css';
+@import 'footer_header.css';
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------CSS for JavaScript-------------------------------------------------*/
 body{
-   background-color: bisque;
+   background-color: white;
 }
 
 #welcomeContainer{
@@ -90,7 +91,9 @@ body{
    flex-flow: row wrap;
    padding:20px 40px;
    gap:30px;
-   border: 1px solid black;
+   /* border: 1px solid black; */
+   margin-top: 25px;
+   margin-bottom: 40px;
 }
 
 .flexContainer .leftSide{
