@@ -95,15 +95,16 @@ footer .contact .text>h5{
 footer .contact .contactWays{
    margin-top: 40px;
    display: flex;
-   flex-flow: row wrap;
-   gap:2rem;
+   flex-shrink: 1;
+   flex-flow: row nowrap;
+   gap:1rem;
    justify-content: space-around;
    align-items: center;
 }
 
-footer .contact .contactWays .item1{
-   padding:15px 30px;
-   width:300px;
+footer .contact .contactWays .item{
+   padding:15px 75px 15px 15px;
+   width:210px;
    border: 1px solid white;
    border-radius: 5px;
    background-color: white;
@@ -112,14 +113,48 @@ footer .contact .contactWays .item1{
    grid-template-areas: 'myLeft myRight';
 }
 
-footer .contact .contactWays .item1 .sideLeft{
+footer .contact .contactWays .item .sideLeft{
    grid-area: myLeft;
    font-size: 3rem;
    align-self: center;
 }
 
-footer .contact .contactWays .item1 .sideRight{
+footer .contact .contactWays .item .sideRight{
    grid-area: myRight;
    margin-left: -25px;
+}
+
+footer  .copyright{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+footer .info .elementsContainer{
+   width: 70%;
+   padding:50px;
+   display: flex;
+   justify-content: space-between;
+   margin-left:auto;
+   margin-right: auto;
+}
+
+footer .info .leftBlue{
+   width:400px;
+   height: 200px;
+}
+
+footer .info .leftBlue>div{
+   font-size: 1.3rem;
+   color: white;
+   margin-bottom: 40px;
+}
+
+footer .info .rightBlue{
+   height: 200px;
+   width: 400px;
+   display: flex;
+   justify-content: space-between;
+   color: white;
 }
 
