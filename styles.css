@@ -6,6 +6,7 @@
 /*-------------------------------------------------------------CSS for JavaScript-------------------------------------------------*/
 body{
    background-color: white;
+   font-family: 'Baloo 2',sans-serif;
 }
 
 #welcomeContainer{
@@ -57,11 +58,6 @@ body{
    }
 }
 /*-------------------------------------------------------------------------------------------------------------------------------*/
-.leftSide>div{
-   background-color: aquamarine;
-   border: 1px solid black;
-}
-
 .leftSide .item1{
    grid-area: first;
 }
@@ -105,13 +101,51 @@ body{
    column-gap: 1rem;
 }
 
+.flexContainer .leftSide .leftItems{
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+}
+
+.flexContainer .leftSide .item{
+   display: flex;
+   flex-direction: column;
+}
+
+.flexContainer .leftSide .item figure{
+   margin: 0px 0px 0px 0px;
+}
+
+.flexContainer .leftSide .item figure img{
+   width: 100%;
+   height: 250px;
+   margin-bottom: 17.5px;
+   border-radius: 10px;
+}
+
+
+.flexContainer .leftSide .item .idFlex{
+   display: flex;
+   gap:10px;
+   width: 100%;
+   justify-content: flex-start;
+   align-items: center;
+   margin-top: -15px;
+}
+
+.flexContainer .leftSide .item .idFlex .id img{
+   width: 40px;
+   height: 40px;
+   border-radius: 100%;
+}
+
 .flexContainer .rightSide{
    width:25%;
    flex:1;
 }
 
 .rightSide .item1{
-   border: 1px solid black;
+   border: 1px solid blue;
    padding:30px 35px;
    font-weight: bold;
    margin-bottom: 40px;
@@ -129,15 +163,15 @@ h3{
 }
 
 .rightSide .item2{
-   border: 1px solid black;
+   border: 1px solid blue;
    padding: 30px 35px;
    margin-bottom: 40px;
 }
-.rightSide .item2 .text .photo{
+.rightSide .item2 .text .photo img{
    grid-area: photo;
    width:70px;
    height:50px;
-   background-color: aquamarine;
+   border-radius: 10px;
 }
 
 .rightSide .item2 .text .description{
@@ -161,7 +195,7 @@ h3{
 .rightSide .item3{
    display: flex;
    flex-direction: column;
-   border:1px solid black;
+   border:1px solid blue;
    padding:30px 35px;
 }
 

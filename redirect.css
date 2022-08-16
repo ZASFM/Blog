@@ -1,3 +1,6 @@
+body{
+   font-family: 'Baloo 2',sans-serif;
+}
 /*-------------------------------------------------------footer and header------------------------------------------------------------------------------*/
 header{
    height:80px;
@@ -67,11 +70,11 @@ footer{
 footer .contact{
    width:100%;
    background-color: rosybrown;
-   height: 300px;
+   height: 400px;
 }
 
 footer .info{
-   top: 300px;
+   top: 400px;
    width:100%;
    background-color: blue;
    height: 300px;
@@ -185,11 +188,10 @@ body{
    width:65%;
 }
 
-.flexContainer .leftSide .postInfo .photo{
-   width:85px;
-   height: 55px;
+.flexContainer .leftSide .postInfo .photo img{
+   width:50px;
+   height: 50px;
    border-radius: 50%;
-   background-color: antiquewhite;
    margin-right: 10px;
 }
 
@@ -235,6 +237,7 @@ body{
 
 .flexContainer .leftSide .flexData{
    display: flex;
+   align-items: center;
    gap:30px;
    border-top: 1px solid black;
    border-bottom: 1px solid black;
@@ -244,15 +247,13 @@ body{
    border-radius: 2px;
 }
 
-.flexContainer .leftSide .flexData .photo{
+.flexContainer .leftSide .flexData .photo img{
    display: flex;
    justify-content: flex-start;
    align-items: center;
-   border: 1px solid red;
-   border-radius: 50%;
+   border-radius: 100%;
    width:150px;
    height:150px;
-   background-color: aquamarine;
 }
 
 .flexContainer .leftSide .relatedEl{
@@ -264,14 +265,48 @@ body{
 
 .flexContainer .leftSide .relatedEl .item1{
    grid-area: item1;
-   background-color: aquamarine;
-   border: 1px solid black;
 }
 
 .flexContainer .leftSide .relatedEl .item2{
    grid-area: item2;
-   background-color: aquamarine;
-   border: 1px solid black;
+}
+
+.flexContainer .leftSide .relatedEl .leftItems{
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+}
+
+.flexContainer .leftSide .relatedEl .leftItems .item{
+   display: flex;
+   flex-direction: column;
+}
+
+.flexContainer .leftSide .relatedEl .leftItems .item figure{
+   margin: 0px 0px 0px 0px;
+}
+
+.flexContainer .leftSide .relatedEl .leftItems .item figure img{
+   height: 250px;
+   width: 100%;
+   margin-bottom: 17.5px;
+   border-radius: 10px;
+}
+
+
+.flexContainer .leftSide .relatedEl .leftItems .item .idFlex{
+   display: flex;
+   gap:10px;
+   width: 100%;
+   justify-content: flex-start;
+   align-items: center;
+   margin-top: -15px;
+}
+
+.flexContainer .leftSide .relatedEl .leftItems .item .idFlex .id img{
+   width: 40px;
+   height: 40px;
+   border-radius: 100%;
 }
 
 .flexContainer .rightSide{
@@ -280,7 +315,7 @@ body{
 }
 
 .rightSide .item1{
-   border: 1px solid black;
+   border: 1px solid blue;
    padding:30px 35px;
    font-weight: bold;
    margin-bottom: 40px;
@@ -298,15 +333,14 @@ h3{
 }
 
 .rightSide .item2{
-   border: 1px solid black;
+   border: 1px solid blue;
    padding: 30px 35px;
    margin-bottom: 40px;
 }
-.rightSide .item2 .text .photo{
+.rightSide .item2 .text .photo img{
    grid-area: photo;
    width:70px;
    height:50px;
-   background-color: aquamarine;
 }
 
 .rightSide .item2 .text .description{
@@ -330,7 +364,7 @@ h3{
 .rightSide .item3{
    display: flex;
    flex-direction: column;
-   border:1px solid black;
+   border:1px solid blue;
    padding:30px 35px;
 }
 
