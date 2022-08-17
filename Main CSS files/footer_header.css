@@ -79,6 +79,14 @@ footer .info{
    height: 300px;
 }
 
+footer .info .socialContainer>a{
+   color: white;
+}
+
+footer .info .socialContainer a>i{
+   margin-right: 15px;
+}
+
 footer .copyright{
    width:100%;
    background-color: black;
