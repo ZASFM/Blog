@@ -1,3 +1,4 @@
+/*----------------------------------------------------------Header------------------------------------------------------------*/
 header{
    height:400px;
    width: 100%;
@@ -48,11 +49,14 @@ nav ul li:last-child >button{
 
 .headerContainer .name, .title{
    text-align: center;
+   text-decoration: underline;
 }
 
 .headerContainer .name{
    margin-top: 150px;
 }
+/*----------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------Footer------------------------------------------------------------*/
 
 footer{
    width:100%;
@@ -86,6 +90,8 @@ footer .copyright{
 footer .contact .text{
    text-align: center;
    border: 1px solid transparent;
+   font-style: italic;
+   font-size: 1.25rem;
 }
 
 footer .contact .text>h5{
@@ -96,7 +102,7 @@ footer .contact .contactWays{
    margin-top: 40px;
    display: flex;
    flex-shrink: 1;
-   flex-flow: row nowrap;
+   flex-direction: row;
    gap:1rem;
    justify-content: space-around;
    align-items: center;
@@ -157,4 +163,5 @@ footer .info .rightBlue{
    justify-content: space-between;
    color: white;
 }
+/*---------------------------------------------------------------------------------------------------------------------------*/
 

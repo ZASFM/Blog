@@ -1,225 +1,110 @@
 /*-----------------------------------------------------Importation -GDP-----------------------------------------------------------*/
-@import 'mobile_style.css';
-@import 'medium_style.css';
+@import 'animation.css';
 @import 'footer_header.css';
+@import 'main_content.css';
 /*-------------------------------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------CSS for JavaScript-------------------------------------------------*/
-body{
-   background-color: white;
-   font-family: 'Baloo 2',sans-serif;
-}
 
-#welcomeContainer{
-   top:0;
-   left:0;
-   width:100%;
-   height: 100%;
-   position: fixed;
-   z-index: 1;
-   background-color: rgba(0, 0, 0, 0.25);
-}
-
-#welcomeContainer #welcomeMessage{
-   width:400px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   background-color: white;
-   border: 1px solid black;
-   border-radius: 15px;
-   padding:10px 15px;
-   font-size: 1.5rem;
-   gap:1rem;
-   box-shadow: 0 0 7px;
-   position: absolute;
-   top:40%;
-   left:37.5%;
-   animation-name: topToCenter;
-   animation-duration: 1.5s;
-}
-
-#closeMessage{
-   font-size: 3.5rem;
-}
-
-#closeMessage:hover{
-   cursor: pointer;
-   color:red;
-}
-
-@keyframes topToCenter{
-   from{
-      top: 0px;
-      opacity:0;
+@media (max-width:900px){
+   nav ul>li:nth-child(2), ul>li:last-child{
+      display: none;
    }
-   to{
-      top: 40%;
-      opacity: 1;
+
+   nav ul::after{
+      content: '\2630';
+      font-size: 2rem;
+   }
+
+   main .flexContainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   main .flexContainer .leftSide{
+      width: 100%;
+   }
+
+   main .flexContainer .rightSide{
+      width: 100%;
+   }
+
+   footer{
+      width:100%;
+      height:1300px;
+      position: absolute;
+      left: 0;
+      right: 0;
+   }
+   
+   footer .contact{
+      width:100%;
+      background-color: rosybrown;
+      height: 650px;
+   }
+   
+   footer .info{
+      top: 650px;
+      width:100%;
+      background-color: blue;
+      height: 550px;
+   }
+   
+   footer .copyright{
+      width:100%;
+      background-color: black;
+      color: white;
+      height: 100px;
+      top: 1200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   
+   footer .contact .contactWays{
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap:1rem;
+      justify-content: center;
+      align-items: center;
+   }
+   
+   footer .info .elementsContainer{
+      width: 70%;
+      padding:50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left:auto;
+      margin-right: auto;
+   }
+   
+   footer .info .leftBlue{
+      width:400px;
+      height: 200px;
+      margin-bottom: 50px;
+      margin-right: auto;
+      margin-left: auto;
+   }
+   
+   footer .info .rightBlue{
+      height: 200px;
+      width: 400px;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      margin-left: auto;
+      margin-right: auto;
    }
 }
-/*-------------------------------------------------------------------------------------------------------------------------------*/
-.leftSide .item1{
-   grid-area: first;
-}
 
-.leftSide .item2{
-   grid-area: second;
-}
-
-.leftSide .item3{
-   grid-area: third;
-}
-
-.leftSide .item4{
-   grid-area: fourth;
-}
-
-.leftSide .item5{
-   grid-area: fifth;
-}
-
-.leftSide .item6{
-   grid-area: sixth;
-}
-
-.flexContainer{
-   display: flex;
-   flex-flow: row wrap;
-   padding:20px 40px;
-   gap:30px;
-   /* border: 1px solid black; */
-   margin-top: 25px;
-   margin-bottom: 40px;
-}
-
-.flexContainer .leftSide{
-   width:65%;
-   display: grid;
-   grid: repeat(3,550px)/repeat(2,1fr);
-   grid-template-areas: 'first second' 'third fourth' 'fifth sixth';
-   row-gap: 1rem;
-   column-gap: 1rem;
-}
-
-.flexContainer .leftSide .leftItems{
-   text-decoration: none;
-   color: black;
-   font-weight: bold;
-}
-
-.flexContainer .leftSide .item{
-   display: flex;
-   flex-direction: column;
-}
-
-.flexContainer .leftSide .item figure{
-   margin: 0px 0px 0px 0px;
-}
-
-.flexContainer .leftSide .item figure img{
-   width: 100%;
-   height: 250px;
-   margin-bottom: 17.5px;
-   border-radius: 10px;
-}
-
-
-.flexContainer .leftSide .item .idFlex{
-   display: flex;
-   gap:10px;
-   width: 100%;
-   justify-content: flex-start;
-   align-items: center;
-   margin-top: -15px;
-}
-
-.flexContainer .leftSide .item .idFlex .id img{
-   width: 40px;
-   height: 40px;
-   border-radius: 100%;
-}
-
-.flexContainer .rightSide{
-   width:25%;
-   flex:1;
-}
-
-.rightSide .item1{
-   border: 1px solid blue;
-   padding:30px 35px;
-   font-weight: bold;
-   margin-bottom: 40px;
-}
-
-.flexContainer .item1 .text{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   border-bottom: 1px solid black;
-}
-
-h3{
-   font-size: 1.75rem;
-}
-
-.rightSide .item2{
-   border: 1px solid blue;
-   padding: 30px 35px;
-   margin-bottom: 40px;
-}
-.rightSide .item2 .text .photo img{
-   grid-area: photo;
-   width:70px;
-   height:50px;
-   border-radius: 10px;
-}
-
-.rightSide .item2 .text .description{
-   grid-area: description;
-   margin-top: -1px;
-}
-
-.rightSide .item2 .date{
-   grid-area: date;
-   margin-top: -3px;
-}
-
-.rightSide .item2 .text{
-   display: grid;
-   grid: auto auto/auto auto;
-   grid-template-areas: 'photo description' '. date';
-   column-gap: 10px;
-   margin-bottom: 30px;
-}
-
-.rightSide .item3{
-   display: flex;
-   flex-direction: column;
-   border:1px solid blue;
-   padding:30px 35px;
-}
-
-.rightSide .item3 .elements .three{
-   grid-area: myThirdSong;
-}
-
-.rightSide .item3 .elements .seven{
-   grid-area: mySeventhSong;
-}
-
-.rightSide .item3 .elements .ten{
-   grid-area: myTenthSong;
-}
-
-.rightSide .item3 .elements{
-   margin-top: 20px;
-   display: grid;
-   grid: auto auto auto/repeat(4,auto);
-   grid-template-areas: '. . myThirdSong myThirdSong' '. . . mySeventhSong' '. . myTenthSong myTenthSong';
-   column-gap: 1rem;
-   row-gap: 1rem;
-}
-
-.rightSide .item2>h3{
-   margin-bottom: 40px;
+@media (max-width:600px){
+   .flexContainer .leftSide{
+      width:100%;
+      display: grid;
+      grid: repeat(6,550px)/auto;
+      grid-template-areas: 'first' 'second' 'third' 'fourth' 'fifth' 'sixth';
+      row-gap: 1rem;
+      column-gap: 1rem;
+   }
 }
